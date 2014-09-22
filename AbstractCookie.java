@@ -16,7 +16,7 @@ public abstract class AbstractCookie extends JButton{
 	public abstract void clickHandler();
 	
 	public String toString(){
-		return ""+this.getType()+" cookie at X:"+this.getX()+", Y:"+this.getY();
+		return ""+this.getType()+" cookie at X:"+this.getX()+", Y:"+this.getY()+"\n";
 	}
 	
 	public void setType(int type){

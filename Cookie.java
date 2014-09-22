@@ -11,7 +11,9 @@ public class Cookie extends AbstractCookie{
 	private static final long serialVersionUID = 1L;
 	private ImageIcon cookieIcon = new ImageIcon("cookie.jpg");
 	
-	public Cookie(){
+	public Cookie(int x, int y){
+		this.setX(x);
+		this.setY(y);
 		this.setType(1);
 		this.setIcon(cookieIcon);
 	}

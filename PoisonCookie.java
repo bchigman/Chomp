@@ -12,7 +12,9 @@ public class PoisonCookie extends AbstractCookie{
 	private static final long serialVersionUID = 1L;
 	private ImageIcon poisonIcon = new ImageIcon("poisonCookie.jpg");
 	
-	public PoisonCookie(){
+	public PoisonCookie(int x, int y){
+		this.setX(x);
+		this.setY(y);
 		this.setType(2);
 		this.setIcon(poisonIcon);
 	}

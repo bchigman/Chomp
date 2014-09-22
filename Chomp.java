@@ -26,8 +26,20 @@ public class Chomp {
 	}
 	
 	public ArrayList<ArrayList<AbstractCookie>> populateCookies(ArrayList<ArrayList<AbstractCookie>> cookies){
+		
 		ArrayList<AbstractCookie> cookieList = new ArrayList<AbstractCookie>();
-		cookieList.add(new PoisonCookie());
+		
+		for (int i = 0; i < this.getSize(); i++){
+			for(int k = 0; k < this.getSize(); k++)
+				if(i == 0 && k == 0){
+					cookieList.add(new PoisonCookie(i, k));
+				}
+				else{
+					cookieList.add(new Cookie(i, k));
+				}
+			
+		}
+		
 		cookies.add(cookieList);
 		
 		return cookies;
