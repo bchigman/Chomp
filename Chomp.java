@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**
  * 
  * @author Ben Higman and Vaughan Coder
@@ -50,4 +48,3 @@ public class Chomp {
 	}
 
 }
->>>>>>> parent of 5c550b3... Added to the populate method and fixed toString problems

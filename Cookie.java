@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**
  * @author Ben Higman and Vaughan Coder
  * @version 0.1 the first version
@@ -23,4 +21,3 @@ public class Cookie extends AbstractCookie{
 	}
 	
 }
->>>>>>> parent of 5c550b3... Added to the populate method and fixed toString problems
