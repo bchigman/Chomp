@@ -16,9 +16,13 @@ public abstract class AbstractCookie extends JButton{
 	public abstract void clickHandler();
 	
 	public String toString(){
-		return ""+this.getType()+" cookie at X:"+this.getX()+", Y:"+this.getY();
+		return ""+this.getType()+" cookie at X:"+this.getX()+", Y:"+this.getY()+"\n";
 	}
 	
+	/**
+	 * Sets the type of cookie
+	 * @param type of cookie
+	 */
 	public void setType(int type){
 		switch(type){
 			case 1: this.type = "Cookie";
@@ -29,22 +33,42 @@ public abstract class AbstractCookie extends JButton{
 		}
 	}
 	
+	/**
+	 * Gets the type of cookie 
+	 * @return String type of cookie
+	 */
 	public String getType(){
 		return this.type;
 	}
 	
+	/**
+	 * Sets the x-position of cookie
+	 * @param x-value
+	 */
 	public void setX(int x){
 		this.xPosition = x;
 	}
 	
+	/**
+	 * Gets the x-position of cookie
+	 * @return int x-value
+	 */
 	public int getX(){
 		return this.xPosition;
 	}
 	
+	/**
+	 * Sets the y-position of cookie
+	 * @param y-value
+	 */	
 	public void setY(int y){
 		this.yPosition = y;
 	}
 	
+	/**
+	 * Gets the y-position of cookie
+	 * @return int y-value
+	 */
 	public int getY(){
 		return this.yPosition;
 	}

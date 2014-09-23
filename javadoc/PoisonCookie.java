@@ -7,9 +7,20 @@
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
+
 public class PoisonCookie extends AbstractCookie{
 	
 	private static final long serialVersionUID = 1L;
+	private ImageIcon poisonIcon = new ImageIcon("poisonCookie.jpg");
+	
+	/**
+	 * Constructor
+	 */
+	public PoisonCookie(){
+		this.setType(2);
+		this.setIcon(poisonIcon);
+	}
 	
 	/**
 	 * Constructor
@@ -24,7 +35,7 @@ public class PoisonCookie extends AbstractCookie{
 	}
 	
 	/**
-	 * Handles event when cookie is clicked. Ends game.
+	 * Handles event when clicked. Ends game.
 	 */
 	public void clickHandler() {
 		
