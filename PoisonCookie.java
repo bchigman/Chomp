@@ -17,8 +17,8 @@ public class PoisonCookie extends AbstractCookie{
 	 * @param yPosition int value of y-position of cookie
 	 */
 	public PoisonCookie(int xPosition, int yPosition){
-		this.setX(xPosition);
-		this.setY(yPosition);
+		this.setXPos(xPosition);
+		this.setYPos(yPosition);
 		this.setType(2);
 		this.setBackground(Color.RED);
 	}

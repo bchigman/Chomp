@@ -51,6 +51,7 @@ public class Chomp{
 		turnLabel = new JLabel("Player " + (currentPlayer+1)  + "'s turn.");
 		JPanel gameHolder = new JPanel();
 		gameHolder.setLayout(new GridLayout(size, size));
+		gameHolder.setOpaque(true);
 		
 		for(AbstractCookie cookie : cookies){
 			cookie.addActionListener(new ActionListener() { 
@@ -63,34 +64,34 @@ public class Chomp{
 	            		clickedCookie.clickHandler();
 	            		
 	            		for(AbstractCookie cookieToBeEaten: cookies){
-	            			if(cookieToBeEaten.getX() >= clickedCookie.getX() && cookieToBeEaten.getY() >= clickedCookie.getY()){
+	            			if(cookieToBeEaten.getXPos() >= clickedCookie.getXPos() && cookieToBeEaten.getYPos() >= clickedCookie.getYPos()){
 	            				cookieToBeEaten.clickHandler();
 	            			}
 	            		}
 	            	}
 	            	else if (clickedCookie.getType()== "Poison"){
 	            		for(AbstractCookie cookieToBeEaten: cookies){
-	            			if(cookieToBeEaten.getX() >= clickedCookie.getX() && cookieToBeEaten.getY() >= clickedCookie.getY()){
+	            			if(cookieToBeEaten.getXPos() >= clickedCookie.getXPos() && cookieToBeEaten.getYPos() >= clickedCookie.getYPos()){
 	            				cookieToBeEaten.clickHandler();
 	            			}
 	            		}
 	            		gameOver();
+	            		clickedCookie.setEnabled(false);
 	            		//frame.setVisible(false);
 	            		//frame.dispose();
 	            	}
 	            }
-	            });
+	        });
 			
 			gameHolder.add(cookie);
+			gameHolder.revalidate();
 			
 		}
 		
-		
 		labelHolder.add(turnLabel);
-		
 		frame.add(labelHolder, BorderLayout.PAGE_START);
 		frame.add(gameHolder, BorderLayout.CENTER);
-		frame.setMinimumSize(new Dimension(500, 500));
+		frame.setMinimumSize(new Dimension(550, 550));
 	    frame.pack();
 	    frame.setVisible(true);
 	}
@@ -114,14 +115,12 @@ public class Chomp{
 			
 		}
 		
-		
 		return cookies;
 	}
 	
 	private void setSize(int size){
 		this.size = size;
 	}
-
 	
 	/**
 	 * Gets the size of the board
@@ -146,7 +145,6 @@ public class Chomp{
 		turnLabel.setText("Player " + (currentPlayer+1) + " loses! (Suck it Trebek!)");
 		
 	}
-	
 
 	/**
 	 * Main method for playing chomp game
@@ -156,7 +154,6 @@ public class Chomp{
 	public static void main(String []args){
 		Chomp chomp = new Chomp();
 		chomp.populateCookies();
-		//ArrayList<AbstractCookie> cookies = new ArrayList<AbstractCookie>();
 		chomp.display();
 	}
 

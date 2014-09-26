@@ -45,7 +45,7 @@ public abstract class AbstractCookie extends JButton{
 	 * Sets the x-position of cookie
 	 * @param x-value
 	 */
-	public void setX(int x){
+	public void setXPos(int x){
 		this.xPosition = x;
 	}
 	
@@ -53,7 +53,7 @@ public abstract class AbstractCookie extends JButton{
 	 * Gets the x-position of cookie
 	 * @return int x-value
 	 */
-	public int getX(){
+	public int getXPos(){
 		return this.xPosition;
 	}
 	
@@ -61,7 +61,7 @@ public abstract class AbstractCookie extends JButton{
 	 * Sets the y-position of cookie
 	 * @param y-value
 	 */	
-	public void setY(int y){
+	public void setYPos(int y){
 		this.yPosition = y;
 	}
 	
@@ -69,7 +69,7 @@ public abstract class AbstractCookie extends JButton{
 	 * Gets the y-position of cookie
 	 * @return int y-value
 	 */
-	public int getY(){
+	public int getYPos(){
 		return this.yPosition;
 	}
 

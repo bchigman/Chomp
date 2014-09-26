@@ -6,6 +6,7 @@
 
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.ImageIcon;
 
@@ -20,11 +21,13 @@ public class Cookie extends AbstractCookie{
 	 * @param yPosition int value of y-position of cookie
 	 */
 	public Cookie(int xPosition, int yPosition){
-		this.setX(xPosition);
-		this.setY(yPosition);
+		this.setXPos(xPosition);
+		this.setYPos(yPosition);
 		this.setType(1);
 		this.setIcon(cookieIcon);
 		this.setBackground(Color.GREEN);
+		this.setSize(new Dimension(100,100));
+		this.setPreferredSize(new Dimension(100,100));
 	}
 	
 	/**
